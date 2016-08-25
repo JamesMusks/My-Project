@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="GC"></div>
+<script>
+    function create() {
+        var gc = document.getElementById('GC');
+        for (var i = 0; i < 500; i++) {
+            var el = document.createElement('div');
+            el.innerHTML = 'test';
+            //下面这句可以注释掉，看看浏览器在任务管理器中，点击按钮然后刷新后的内存变化
+            gc.appendChild(el);
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
